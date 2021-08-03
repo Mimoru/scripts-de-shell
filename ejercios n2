@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+echo "ingrese valor (si es un directorio inicielo con /):"
+read P
+
+ if [[ -f "$P" ]]; then
+
+ du -sh $P
+
+ elif [[ -d "$P" ]]; then
+
+ du -sh $P
+
+ else
+ echo existe??
+
+ fi
+ 
+ 
+ 
