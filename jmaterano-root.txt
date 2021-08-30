@@ -1,0 +1,68 @@
+    1  yum upgrade
+    2  yum install wget
+    3  yum install lynx
+    4  yum install vim
+    5  yum install httpd
+    6  cd /var/www/html/
+    7  ls
+    8  vim index.html
+    9  ls
+   10  cd /etc/httpd/conf/
+   11  ls
+   12  vim httpd.conf
+   13  systemctl start httpd
+   14  systemctl status httpd
+   15  wg
+   16  lynx localhost
+   17  firewall-cmd --zone=public --add-service=httpç
+   18  firewall-cmd --zone=public --add-service=http
+   19  rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
+   20  sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/mysql-community.repo
+   21  yum --enablerepo=mysql80-community install mysql-community-server
+   22  service mysqld start
+   23  service mysqld status
+   24  grep "A temporary password" /var/log/mysqld.log
+   25  mysql_secure_installation
+   26  service mysqld restart
+   27  service mysqld status
+   28  chkconfig mysqld on
+   29  mysql -u root -p
+   30  mysql
+   31  exit
+   32  mysql
+   33  run mysql
+   34  mysql on
+   35  mysql -u root -p
+   36  mysql -u pepe -h localhost -p
+   37  mysql -u pepe -h 192.168.1.12 -p
+   38  mysql_secure_installation
+   39  mysql -u pepe -h 192.168.1.12 -p
+   40  mysql -u pepe -p
+   41  mysql -u pepe@192.168.1.12 -p
+   42  mysql -u pepe 192.168.1.12 -p
+   43  mysql -u pepe 192.168.1.12 password = '2Prueba!'
+   44  mysql -u pepe 192.168.1.12 password '2Prueba!'
+   45  mysql -u pepe -h 192.168.1.12 -p
+   46  mysql -u pepe -h 192.168.1.12 password '2Prueba!'
+   47  mysql -u pepe -h 192.168.1.12 -p
+   48  mysql -u root 
+   49  mysql -u root
+   50  ysql -u pepe@192.168.1.12 -p
+   51  mysql -u root -p
+   52  mysqld --skip-grant-tables
+   53  mysql -u root -p
+   54  /etc/init.d/mysql restart
+   55  $ /etc/init.d/mysql restart
+   56  mysql restart
+   57  mysql restart on
+   58  mysql restart
+   59  service mysqld restart
+   60  mysql -u root -p
+   61  mysql -u pepe’ -h localhost -p
+   62  mysql -u pepe’ -h 192.168.1.12 -p
+   63  mysql -u pepe’ -h localhost -
+   64  mysqldump prueba -h 192.168.1.12 -u pepe -p > practico5-mysql.sql
+   65  mysqldump prueba -h 192.168.1.12 -u pepe’ -p > practico5-mysql.sql
+   66  mysqldump respaldo_jsanchez -h 192.168.1.12 -u pepe’ -p > practico5-mysql.sql
+   67  ls
+   68  history >jmaterano.txt
