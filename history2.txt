@@ -1,0 +1,6 @@
+    1  su
+    2  su 
+    3  docker-compose logs
+    4  su
+    5  history >jmaterano
+    6  history >jmaterano.txt

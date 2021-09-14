@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Bienvenido al medidor de espacio y tamaño"
+echo "con este script podras ver:"
+select opt in ficheros-espacio directorios-espacio disco-espacio ver-permisos salir ; 
+
+do
+    case $opt in
+            ficheros-espacio)
+                read -p "ingrese la ruta del fichero con su extension :" p
+                if [[ -f "$p" ]]; then
+                    du -sh $p
+                else 
+                    echo "existe ??"
+                fi 
+            ;;
+            directorios-espacio)
+
+                read -p "ingrese el directorio completo :" p
+                
+                if [[ -d "$p" ]]; then
+                    du -sh $p
+                else
+                    echo "existe ??"
+                fi
+            ;;
+            disco-espacio)
+                df -h
+            ;;
+            ver-permisos)
+                read -p "ingrese el directorio donde se encuentra los archivos" p
+                ls -l $p
+            ;;
+             salir)
+                break
+             ;;
+             *)
+                echo "Invalid option $REPLY"
+             ;;
+
+    esac
+done
+ 
+ 
+ 
+#Escribir un script que al pasarle por argumento un archivo o directorio, devuelve el tamaño en MB.
+

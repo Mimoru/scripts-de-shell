@@ -1,0 +1,28 @@
+#funciones  
+function VF {
+
+	if [ -f "$1" ]; then
+		echo "es un fichero"
+		echo ""
+	else 
+		echo "no es un fichero"
+		echo ""
+	fi
+}
+function VD {
+	if [ -d "$p" ]; then
+		echo "es un directorio"
+	else 
+		echo "no es un directorio"
+	fi
+
+}
+echo "ingrese valor (si es un directorio inicielo con /):"
+read p
+
+VD $p
+VF $p
+
+
+
+
