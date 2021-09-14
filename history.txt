@@ -1,0 +1,147 @@
+    1  yum upgrade
+    2  yum install vim
+    3  yum install wget
+    4  yum install lynx
+    5  yum install httpd
+    6  cd /var/www/
+    7  ls
+    8  cd html
+    9  vim index.html
+   10  cd /etc/httpd/conf/
+   11  ls
+   12  vim httpd.conf
+   13  systemctl start httpd
+   14  systemctl status httpd
+   15  wget localhost
+   16  lynx localhost
+   17  firewall-cmd --zone=public --add-service=http
+   18  cd 
+   19  cd /home
+   20  rpm -Uvh https://repo.mysql.com/mysql80-community-release-el7-3.noarch.rpm
+   21  sed -i 's/enabled=1/enabled=0/' /etc/yum.repos.d/mysql-community.repo
+   22  yum --enablerepo=mysql80-community install mysql-community-server
+   23  service mysqld start
+   24  service mysqld status
+   25  grep "A temporary password" /var/log/mysqld.log
+   26  mysql_secure_installation
+   27  service mysqld restart
+   28  service mysqld status
+   29  chkconfig mysqld on
+   30  chkconfig mysqld onmysql -u root -p
+   31  mysql -u root -p
+   32  yum install -y yum-utils device-mapper-persistent-data lvm2
+   33  yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+   34  yum install docker-ce
+   35  systemctl enable docker
+   36  systemctl start docker
+   37  systemctl status docker
+   38  docker run hello-world
+   39  docker images
+   40  curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   41  chmod +x /usr/local/bin/docker-compose
+   42  ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+   43  cd /usr/local/bin/
+   44  ls -l
+   45  cd /home
+   46  docker-compose --version
+   47  exit
+   48  mkdir Docker
+   49  cd Doc
+   50  mkdir apache-php
+   51  mkdir mysql
+   52  touch docker-compose.yml
+   53  vim docker-compose.yml
+   54  cd apache-php
+   55  touch Dockerfile
+   56  vim Dockerfile
+   57  ls
+   58  vim Dockerfile
+   59  cd ..
+   60  lsç
+   61  ls
+   62  cd mysql
+   63  ls
+   64  vim Dockerfile
+   65  touch Dockerfile
+   66  vim Dockerfile
+   67  ls
+   68  touch healthcheck.sh
+   69  vim healthcheck.sh
+   70  touch docker-entrypoint.sh
+   71  vim docker-entrypoint.sh
+   72  ls
+   73  chmod +x docker-entrypoint.sh
+   74  ls
+   75  chmod +x healthcheck.sh
+   76  ls
+   77  cd ..
+   78  ls
+   79  mkdir data
+   80  ls
+   81  mkdir www
+   82  cd www
+   83  mkdir html
+   84  cd html
+   85  touch test.php
+   86  vim test.php
+   87  cd ..
+   88  cd
+   89  docker-compose up -d
+   90  ls
+   91   cd apache-php
+   92  ls
+   93  docker build - < /home/jmaterano/Docker/apache-php/Dockerfile
+   94  docker images
+   95  docker-compose up -d
+   96  sudo netstat -nlpt |grep 3306
+   97  service mysql stop
+   98  service mysql status
+   99  service mysqld status
+  100  service mysqld stop
+  101  cd
+  102  cd /home/jmaterano/Docker
+  103  ls
+  104  docker-compose up -d
+  105  ls
+  106  exit
+  107  docker-compose logs
+  108  cd Docker
+  109  docker-compose logs
+  110  cd /var/www/html
+  111  su
+  112* 
+  113  cd /var/www/html
+  114  vim test.php
+  115  ls
+  116  vim index.html
+  117  systemctl start httpd
+  118  systemctl status httpd
+  119  firewall-cmd --zone=public --add-service=http
+  120  docker-compose logs
+  121  cd /home/jmaterano/Docker
+  122  docker-compose logs
+  123  systemctl status httpd
+  124  docker images
+  125  docker-compose stop
+  126  cd ..
+  127  ls
+  128  mkdir sh
+  129  cd sh
+  130  touch p1v2.sh
+  131  vim p1v2.sh
+  132  ./p1v2.sh
+  133  sudo ./p1v2.sh
+  134  ./p1v2.sh
+  135  chmod +x p1v2.sh
+  136  ./p1v2.sh
+  137  vim p1v2.sh
+  138  ./p1v2.sh
+  139  touch p2v2.sh
+  140  vim p2v2.sh
+  141  chmod +x p2v2.sh
+  142  ./p2v2.sh
+  143  vim p2v2.sh
+  144  ./p2v2.sh
+  145  vim p2v2.sh
+  146  cd ..
+  147  history > root.txt
